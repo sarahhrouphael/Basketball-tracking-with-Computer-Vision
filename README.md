@@ -66,7 +66,7 @@ calib.png
 
 ### Run
 → Run the file Detection.ipynb to see Yolo Detections.  
-→ un the file PlayerTracking and Mapping.ipynb to check and run full algorithm of DeepSORT and Court Mapping.
+→ Run the file PlayerTracking and Mapping.ipynb to check and run full algorithm of DeepSORT and Court Mapping.
 
 Note: All the helper functions and dependencies are present in the root folder with the python notebooks.
 
