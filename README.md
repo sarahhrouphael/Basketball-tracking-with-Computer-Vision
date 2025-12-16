@@ -16,77 +16,55 @@ The system focuses first on **single-camera static recordings**, and later exten
 - Generate court-level analytics such as density maps and movement heatmaps.
 - Prepare the pipeline for extension to multi-camera datasets.
 
-This project does **not** focus on gameplay understanding (passes, screens, actions), but rather on the fundamental perception and tracking tasks required as a foundation.
 
-## 🏁 Project Stages
+## Repository Structure
+Basketball-tracking-with-Computer-Vision/
 
-### **Step 1 — Dataset Collection**
-Gather suitable basketball video datasets for model training and evaluation.
+├── Failure/
+│   ├── Court_segmentation.ipynb/           # Attempt to do Court Segmentation
+│   ├── Team_Detection.ipynb/               # Caliberation of Team
+│    
+│
+├── models/
+│   ├── Ball_detection/
+│   ├     ├── ball_hoop.pt     # Trained YOLO weights / configs for Ball and Hoop
+│   ├── Players_Detection/
+│   ├     ├── player.pt        # Trained YOLO weights / configs for Player
+│
+├── source/
+│   └── vid9.mp4               # Video to run the model on
+│
+├── final_output_video/
+│   └── tracked_with_court.mp4/        # Final output video
+│
+├── requirements.txt
+├── Ball_Possesion.py
+├── Team_classification.py
+├── Detection,ipynb
+├── PlayerTracking and Mapping.ipynb
+├── dataset_download.ipynb
+├── calib.png
+├── basketball_court.png
+└── README.md
 
-Two categories of data will be used:
 
-1. **Static Single-Camera Recordings**  
-   - Full-court view  
-   - Minimal camera movement  
-   - Ideal for initial development
 
-2. **Multi-Camera or Broadcast Footage**  
-   - Used in later stages  
-   - Allows camera fusion and more complex tracking scenarios
+### Environment Setup
 
----
+Install all required dependencies using:
+→ pip install -r requirements.txt
 
-### **Step 2 — Object Detection**
-Develop the module responsible for detecting key entities in each frame:
+### Dataset & Assets Preparation
 
-- Players  
-- Basketball  
-- Hoop / Backboard  
+source/vid9.mp4
+→ Input broadcast basketball video used for evaluation.
+basketball_court.png
+→ Top-down basketball court template used for projection.
+calib.png
+→ Frame used for manual calibration and homography estimation.
 
-The detection outputs will serve as the foundation for all subsequent tracking and analysis stages.
 
----
-
-### **Step 3 — Team Classification**
-Assign each detected player to the correct team.
-
-This is achieved through appearance-based analysis, such as:
-
-- Dominant jersey colors  
-- Color clustering  
-- Lightweight classifier models  
-
-The output is a team ID associated with each player track.
-
----
-
-### **Step 4 — Tracking and Event Detection**
-Track objects across time to obtain continuous trajectories:
-
-- **Player Tracking:** Maintain consistent IDs for each player throughout the game.  
-- **Ball Tracking:** Follow the basketball’s movement, accounting for fast motion and occlusions.
-
-Using this tracking information, detect basic events such as:
-
-- Ball passing through the hoop → **made shot**  
-- (Optional future step) Classify 2-point vs 3-point attempts
-
----
-
-### **Step 5 — Court Analytics & Density Maps**
-Translate tracking data into actionable insights.
-
-Examples include:
-
-- Player heatmaps  
-- Team movement density maps  
-- Ball trajectory visualizations  
-
-This requires projecting image coordinates onto a **canonical basketball court layout**.
-
----
-
-### **Step 6 — Possible Future Improvements **
+### Possible Future Improvements **
 Potential enhancements include:
 
 - Multi-camera fusion and 3D player localization  
