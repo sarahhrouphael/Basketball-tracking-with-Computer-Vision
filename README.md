@@ -50,21 +50,23 @@ Basketball-tracking-with-Computer-Vision/
 
 ### Environment Setup
 
-Install all required dependencies using:
+Install all required dependencies using:  
+```text
 → pip install -r requirements.txt
+```
 
 ### Dataset & Assets Preparation
 
-source/vid9.mp4
+source/vid9.mp4  
 → Input broadcast basketball video used for evaluation.
-basketball_court.png
+basketball_court.png  
 → Top-down basketball court template used for projection.
-calib.png
+calib.png  
 → Frame used for manual calibration and homography estimation.
 
 ### Run
-Run the file Detection.ipynb to see Yolo Detections
-Run the file PlayerTracking and Mapping.ipynb to check and run full algorithm of DeepSORT and Court Mapping
+→ Run the file Detection.ipynb to see Yolo Detections.  
+→ un the file PlayerTracking and Mapping.ipynb to check and run full algorithm of DeepSORT and Court Mapping.
 
 Note: All the helper functions and dependencies are present in the root folder with the python notebooks.
 
