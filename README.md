@@ -16,34 +16,36 @@ The system focuses first on **single-camera static recordings**, and later exten
 - Generate court-level analytics such as density maps and movement heatmaps.
 - Prepare the pipeline for extension to multi-camera datasets.
 
+
+```text
 Basketball-tracking-with-Computer-Vision/
-|-- Failure/
-|   |-- Court_segmentation.ipynb
-|   `-- Team_Detection.ipynb
-|
-|-- models/
-|   |-- Ball_detection/
-|   |   `-- ball_hoop.pt
-|   `-- Players_Detection/
-|       `-- player.pt
-|
-|-- source/
-|   `-- vid9.mp4
-|
-|-- final_output_video/
-|   `-- tracked_with_court.mp4
-|
-|-- requirements.txt
-|-- Ball_Possesion.py
-|-- Team_classification.py
-|-- Detection.ipynb
-|-- PlayerTracking and Mapping.ipynb
-|-- dataset_download.ipynb
-|-- calib.png
-|-- basketball_court.png
-`-- README.md
+├── Failure/
+│   ├── Court_segmentation.ipynb          # Attempt to do court segmentation
+│   └── Team_Detection.ipynb              # Calibration of team detection
+│
+├── models/
+│   ├── Ball_detection/
+│   │   └── ball_hoop.pt                  # Trained YOLO weights for ball + hoop
+│   └── Players_Detection/
+│       └── player.pt                     # Trained YOLO weights for players
+│
+├── source/
+│   └── vid9.mp4                          # Video to run the model on
+│
+├── final_output_video/
+│   └── tracked_with_court.mp4            # Final output video
+│
+├── requirements.txt
+├── Ball_Possesion.py
+├── Team_classification.py
+├── Detection.ipynb
+├── PlayerTracking and Mapping.ipynb
+├── dataset_download.ipynb
+├── calib.png
+├── basketball_court.png
+└── README.md
 
-
+```
 
 
 ### Environment Setup
