@@ -16,7 +16,7 @@ The system focuses first on **single-camera static recordings**, and later exten
 - Generate court-level analytics such as density maps and movement heatmaps.
 - Prepare the pipeline for extension to multi-camera datasets.
 
-
+## Repository Structure
 ```text
 Basketball-tracking-with-Computer-Vision/
 ├── Failure/
