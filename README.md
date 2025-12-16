@@ -62,6 +62,8 @@ basketball_court.png
 calib.png
 → Frame used for manual calibration and homography estimation.
 
+### Run
+Run the file Detection.ipynb
 
 ### Possible Future Improvements **
 Potential enhancements include:
